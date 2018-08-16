@@ -1,0 +1,47 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Prombiznessgroup Theme\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-29 07:21+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
+
+#. Name of the template
+msgid "Contact form"
+msgstr ""
+
+#. Description of the theme
+msgid "Custom WordPress Theme"
+msgstr ""
+
+#. Name of the template
+msgid "Gallery page"
+msgstr ""
+
+#. Name of the template
+msgid "Home page"
+msgstr ""
+
+#. Name of the template
+msgid "News page"
+msgstr ""
+
+#. Name of the theme
+msgid "Prombiznessgroup Theme"
+msgstr ""
+
+#. Author of the theme
+msgid "Shcherbyna Ivan"
+msgstr ""
+
+#. Name of the template
+msgid "Турниры шаблон"
+msgstr ""
