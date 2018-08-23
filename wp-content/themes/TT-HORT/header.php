@@ -34,20 +34,19 @@
 <!-- wrapper -->
 <div class="wrapper">
     <header class="header" role="banner">
-        <a class="header-logo" href="<?php echo get_home_url(); ?>"><img src="<?php
-            if($locale=='en_US'){
-                echo $mytheme['logo-header-en']['url'];
-            }
-            else {
-                echo $mytheme['logo-header-general']['url'];
-            }
-            ;?>"></a>
-        <!-- <h2 class="head-title-company"><?php //echo $mytheme['head-text-company-name'];?></h2> -->
         <div id="navigation"  class="">
             <div class="main-nav-wrap">
+                <div class="col-sm-12 text-center head-title"><h1><?php echo $mytheme['head-title'];?></h1></div>
                 <nav class="navbar custom-nav" role="navigation">
-                    <div class="container">
-
+                    <div class="container" id="adaptive">
+                        <a class="header-logo" href="<?php echo get_home_url(); ?>"><img src="<?php
+                            if($locale=='en_US'){
+                                echo $mytheme['logo-header-en']['url'];
+                            }
+                            else {
+                                echo $mytheme['logo-header-general']['url'];
+                            }
+                            ;?>"></a>
                         <div class="navbar-header">
                             <button type="button" class="navbar-toggle" id="clicked-show-menu">
                                 <span class="sr-only">Toggle navigation</span>
@@ -57,18 +56,13 @@
                             </button>
                             <?php my_nav(); ?>
                         </div>
-
+                        <div class="mobile"><?php my_nav(); ?></div>
                             <?php qtranxf_generateLanguageSelectCode('image'); ?>
                         
-                        <div class="mobile"><?php my_nav(); ?></div>
+
                     </div>
                 </nav>
             </div>
 
 
     </header>
-    <script>
-        jQuery(document).ready(function() {
-            jQuery('.preloader').removeClass("load");
-        });
-    </script>

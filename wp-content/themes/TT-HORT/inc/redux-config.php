@@ -72,17 +72,7 @@ if ( ! class_exists( 'Redux_Framework_Lwp_config' ) ) {
 
         public function setSections() {
 
-            /* Set fields */
-//			$general_fields = array(
-//
-//			);
 
-            /* Set sections */
-//			$this->sections[] = array(
-//				'title'  => __( 'General', THEME_OPT ),
-//				'icon'   => 'el-icon-cog',
-//				'fields' => $general_fields
-//			);
             /* Set sections HEADER*/
             $this->sections[]=array(
 
@@ -93,6 +83,11 @@ if ( ! class_exists( 'Redux_Framework_Lwp_config' ) ) {
                         'title' => __('Header background color', THEME_OPT),
                         'type' => 'background',
                         'id' =>'header-background-color'
+                    ),
+                    array(
+                        'title' => __('Header title', THEME_OPT),
+                        'type' => 'text',
+                        'id' =>'head-title'
                     ),
                     array(
                         'title' =>__('Logo Uploader (GENERAL-RU/UA)', THEME_OPT),
@@ -209,6 +204,11 @@ if ( ! class_exists( 'Redux_Framework_Lwp_config' ) ) {
                         'title' => __('FNTU img', THEME_OPT),
                         'type' => 'media',
                         'id' =>'fntu-img'
+                    ),
+                    array(
+                        'title' => __('E-mail', THEME_OPT),
+                        'type' => 'text',
+                        'id' =>'mail'
                     ),
                 )
             );

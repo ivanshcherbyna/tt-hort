@@ -27,8 +27,9 @@
                     <li><a href="<?php echo esc_url($mytheme['facebook']);?>"><i class="fa fa-facebook"></i> <?php echo $mytheme['facebook-title'];?></a> </li>
                     <li><a href="<?php echo esc_url($mytheme['instagram']);?>"> <i class="fa fa-instagram"></i><?php echo $mytheme['instagram-title'];?></a></li>
                     <li><a href="<?php echo esc_url($mytheme['youtube']);?>"><i class="fa fa-youtube"></i><?php echo $mytheme['youtube-title'];?></a></li>
-                    <li><a href="<?php echo esc_url($mytheme['fntzo']);?>" ><img src="<?php echo $mytheme['fntzo-img']['url'];?>" width="50px"> <?php echo $mytheme['fntzo-title'];?></a></li>
-                    <li><a href="<?php echo esc_url($mytheme['fntu']);?>" ><img src="<?php echo $mytheme['fntu-img']['url'];?>" width="50px"> <?php echo $mytheme['fntu-title'];?></a></li>
+                    <li><a href="<?php echo esc_url($mytheme['fntzo']);?>"><img src="<?php echo $mytheme['fntzo-img']['url'];?>" width="50px"> <?php echo $mytheme['fntzo-title'];?></a></li>
+                    <li><a href="<?php echo esc_url($mytheme['fntu']);?>"><img src="<?php echo $mytheme['fntu-img']['url'];?>" width="50px"><?php echo $mytheme['fntu-title'];?></a></li>
+                    <li><a href="mailto:<?php echo $mytheme['mail'];?>" ><i class="fa fa-envelope-o"></i>e-mail</a></li>
                 </ul>
             </div>
 
