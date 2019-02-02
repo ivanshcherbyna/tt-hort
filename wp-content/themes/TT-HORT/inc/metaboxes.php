@@ -10,21 +10,7 @@ $redux_opt_name = THEME_OPT;
 if ( !function_exists( "redux_add_metaboxes" ) ):
 	function redux_add_metaboxes($metaboxes) {
 	
-//	$page_options = array();
-//
-//	$metaSection = array(
-//		'title' => 'Page meta',
-//		'icon_class'    => 'icon-large',
-//		'icon'          => 'el-icon-list-alt',
-//		'fields' => array(
-//			array(
-//				'id'     => 'meta',
-//				'type'   => 'text',
-//				'title'  => __( 'Metafield')
-//			),
-//		)
-//	);
-//	$page_options[] = $metaSection;
+
         $home_page_options[] = array(
 
             'title'		 	=> __('home page sector', THEME_OPT ),
@@ -36,6 +22,27 @@ if ( !function_exists( "redux_add_metaboxes" ) ):
                     'title' => __('Background image',  THEME_OPT),
                     'type' => 'media',
                     'id' =>'home-background'
+                )
+            )
+        );
+        $services_page_options[] = array(
+
+            'title'		 	=> __('Services page sector', THEME_OPT ),
+            'icon_class'    => 'icon-large',
+            'icon' 			=> 'el-icon-website',
+            'fields'		=> array(
+                array(
+                    'id'       => 'coach-select',
+                    'type'     => 'select',
+                    'title'    => __('Select Coach', 'redux-framework-demo'),
+                    'subtitle' => __('No validation can be done on this field type', 'redux-framework-demo'),
+                       // Must provide key => value pairs for select options
+                    'options'  => array(
+                        '1' => 'Opt 1',
+                        '2' => 'Opt 2',
+                        '3' => 'Opt 3'
+                    ),
+                    'default'  => '2',
                 )
             )
         );
@@ -58,22 +65,33 @@ if ( !function_exists( "redux_add_metaboxes" ) ):
                 )
             )
         );
-        $product_page_options[] = array(
+        $gallery_page_options[] = array(
 
-            'title'		 	=> __('Products sector', THEME_OPT ),
+            'title'		 	=> __('Gallery page sector', THEME_OPT ),
             'icon_class'    => 'icon-large',
             'icon' 			=> 'el-icon-website',
             'fields'		=> array(
 
                 array(
-                    'title' => __('Location inner text',  THEME_OPT),
-                    'type' => 'slides',
-                    'id' =>'products-slides',
-                    'placeholders'=> array(
-                        'title' => __('This is a title',THEME_OPT),
-                        'description' => __('Descripton here',THEME_OPT),
-                        'url' => __('give a link',THEME_OPT)
-                    )
+                    'title' => __('Head text',  THEME_OPT),
+                    'type' => 'gallery',
+                    'id' =>'gallery-id'
+                )
+            )
+        );
+        $video_gallery_page_options[] = array(
+
+            'title'		 	=> __('Video gallery page sector', THEME_OPT ),
+            'icon_class'    => 'icon-large',
+            'icon' 			=> 'el-icon-website',
+            'fields'		=> array(
+
+                array(
+                    'title' => __('Yotube links',  THEME_OPT),
+                    'type' => 'multi_text',
+                    'desc' => 'укажите код URL ролика после \'https://www.youtube.com/watch?v=\'',
+                    'validate' => 'url',
+                    'id' =>'video-yutube-url'
                 )
             )
         );
@@ -87,17 +105,37 @@ if ( !function_exists( "redux_add_metaboxes" ) ):
 		'priority'      => 'high', // high, core, default, low
 		'sidebar'       => false, // enable/disable the sidebar in the normal/advanced positions
 		'sections'      => $home_page_options,
-	);
+	    );
+	    $metaboxes[] = array(
+		'id'            => 'services-page-options',
+		'title'         => __( 'Services page options', THEME_OPT ),
+		'post_types'    => array( 'page' ),
+		'page_template' => array('services-page.php'),
+		'position'      => 'normal', // normal, advanced, side
+		'priority'      => 'high', // high, core, default, low
+		'sidebar'       => false, // enable/disable the sidebar in the normal/advanced positions
+		'sections'      => $services_page_options,
+	    );
 
         $metaboxes[] = array(
-            'id'            => 'products-options',
+            'id'            => 'photo-gallery-options',
             'title'         => __( 'Page options', THEME_OPT ),
             'post_types'    => array( 'page' ),
-            'page_template' => array('products-page.php'),
+            'page_template' => array('photo-gallery-page.php'),
             'position'      => 'normal', // normal, advanced, side
             'priority'      => 'high', // high, core, default, low
             'sidebar'       => false, // enable/disable the sidebar in the normal/advanced positions
-            'sections'      => $product_page_options,
+            'sections'      => $gallery_page_options,
+        );
+        $metaboxes[] = array(
+            'id'            => 'video-gallery-options',
+            'title'         => __( 'Page options', THEME_OPT ),
+            'post_types'    => array( 'page' ),
+            'page_template' => array('videos-page.php'),
+            'position'      => 'normal', // normal, advanced, side
+            'priority'      => 'high', // high, core, default, low
+            'sidebar'       => false, // enable/disable the sidebar in the normal/advanced positions
+            'sections'      => $video_gallery_page_options,
         );
         $metaboxes[] = array(
             'id'            => 'contact-options',

@@ -1,9 +1,9 @@
 === Cyr-To-Lat ===
-Contributors: Atrax, SergeyBiryukov
-Tags: cyrillic, latin, l10n, russian, rustolat, slugs, translations, transliteration
+Contributors: SergeyBiryukov, mihdan, karevn, webvitaly, kagg-design
+Tags: cyrillic, georgian, latin, l10n, russian, rustolat, slugs, translations, transliteration
 Requires at least: 2.3
-Tested up to: 3.1
-Stable tag: 3.2
+Tested up to: 5.1
+Stable tag: 3.4
 
 Converts Cyrillic characters in post, page and term slugs to Latin characters.
 
@@ -16,7 +16,7 @@ Converts Cyrillic characters in post, page and term slugs to Latin characters. U
 * Saves existing post and page permalinks integrity
 * Performs transliteration of attachment file names
 * Includes Russian, Belarusian, Ukrainian, Bulgarian and Macedonian characters
-* Transliteration table can be customized without editing the plugin itself
+* Transliteration table can be customized without editing the plugin by itself
 
 Based on the original Rus-To-Lat plugin by Anton Skorobogatov.
 
@@ -40,6 +40,19 @@ add_filter('ctl_table', 'my_cyr_to_lat_table');
 `
 
 == Changelog ==
+
+= 3.4 (21.01.2019) =
+* Tested up to WP 5.1
+* Code formatting to follow WPCS.
+* Strict comparisons.
+* Braces {} removed from MySQL statements to allow checking of table names in PhpStorm.
+* Updated .gitignore and README.md
+* Added new filter `ctl_pre_sanitize_title`
+
+= 3.3 (18.01.2019) =
+* wpcs 1.0
+* Fixed many bugs
+* Added Gutenberg support
 
 = 3.2 =
 * Added transliteration when publishing via XML-RPC

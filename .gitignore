@@ -135,6 +135,8 @@ wp-content/mu-plugins/
 wp-content/wp-cache-config.php
 wp-content/plugins/hello.php
 
+/tt-hort/
+/backup-24-01-2019/
 
 /.htaccess
 /license.txt
