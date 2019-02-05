@@ -11,7 +11,8 @@ function get_news()
         'order' => 'DESC',
         'category_name' => 'news',
         'post_status' => 'publish',
-        'post_type' => 'post'
+        'post_type' => 'post',
+        'posts_per_page' => 1
     );
 
     $posts = get_posts($args);
@@ -59,7 +60,7 @@ wp_reset_postdata(); // сброс
 
             <div class="container">
                 <div class="row">
-                    <?php get_news();?>
+                    <?php echo do_action('get_news', -1);?>
                 </div>
             </div>
         </div>

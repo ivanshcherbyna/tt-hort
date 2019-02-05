@@ -3,40 +3,7 @@
 *Template Name: Услуги
  */
 ?>
-<?php global $mytheme;
-function get_news()
-{
-    $args = array(
-        'orderby' => 'date',
-        'order' => 'DESC',
-        'category_name' => 'турниры',
-        'post_status' => 'publish',
-        'post_type' => 'post'
-    );
-
-    $posts = get_posts($args);
-
-    foreach ($posts as $post) {
-        setup_postdata($post);
-        $str = strpos($post->post_content, "\n");
-        $subtitle = strpos($post->post_content,0,$str);
-        $image=get_the_post_thumbnail_url($post,array(500,500));
-        echo '<div class="current-post-tournament col-sm-10" style="background: url('.$image.') center">
-                <a class="link-post" href="'.$post->guid.'">
-
-                <div class="date-post">'.the_date().'</div>
-                
-                <h3 class="head-post">'.$post->post_title.'</h3>
-                </a>
-                <div class="chunk-post">'.$subtitle.'</div>
-              </div>
-              <br>
-        ';
-        // формат вывода
-    }
-}
-wp_reset_postdata(); // сброс
-?>
+<?php global $mytheme;?>
 <?php get_header(); ?>
 
 <!-- main content goes here -->
@@ -62,11 +29,12 @@ wp_reset_postdata(); // сброс
 
             <div class="container">
                 <div class="row">
-                    <?php get_news();?>
+                    <?php echo do_action('get_services');?>
                 </div>
             </div>
         </div>
     </section>
     <!-- /section -->
 </main>
+<?php do_action('fancy_on'); ?>
 <?php get_footer(); ?>

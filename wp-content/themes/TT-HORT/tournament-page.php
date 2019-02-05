@@ -9,8 +9,9 @@ function get_news()
     $args = array(
         'orderby' => 'date',
         'order' => 'DESC',
-        'category_name' => 'турниры',
+        'category_name' => 'turniryi',
         'post_status' => 'publish',
+        'per_page' => -1,
         'post_type' => 'post'
     );
 

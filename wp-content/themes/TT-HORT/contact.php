@@ -22,7 +22,7 @@ global $mytheme;
 <!--        <div class="contact-subheading">--><?php //echo $mytheme['contact-subhead-text'];?><!--</div>-->
         <div class="inputs-wrap">
             <?php
-            echo do_shortcode('[contact-form-7 id="8" title="Contact form 1"]');
+            echo do_shortcode('[contact-form-7 id="58" title="Contact-form"]');
             ?>
         </div>
     </div>

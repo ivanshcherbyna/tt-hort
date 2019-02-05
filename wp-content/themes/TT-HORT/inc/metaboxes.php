@@ -67,13 +67,12 @@ if ( !function_exists( "redux_add_metaboxes" ) ):
         );
         $gallery_page_options[] = array(
 
-            'title'		 	=> __('Gallery page sector', THEME_OPT ),
+            'title'		 	=> __('Галлерея фото/картинок', THEME_OPT ),
             'icon_class'    => 'icon-large',
             'icon' 			=> 'el-icon-website',
             'fields'		=> array(
 
                 array(
-                    'title' => __('Head text',  THEME_OPT),
                     'type' => 'gallery',
                     'id' =>'gallery-id'
                 )
@@ -81,14 +80,15 @@ if ( !function_exists( "redux_add_metaboxes" ) ):
         );
         $video_gallery_page_options[] = array(
 
-            'title'		 	=> __('Video gallery page sector', THEME_OPT ),
+            'title'		 	=> __('Секция видео-галлереи', THEME_OPT ),
             'icon_class'    => 'icon-large',
             'icon' 			=> 'el-icon-website',
             'fields'		=> array(
 
                 array(
-                    'title' => __('Yotube links',  THEME_OPT),
+                    'title' => __('Yotube ссылки',  THEME_OPT),
                     'type' => 'multi_text',
+                    'style' => 'warning',
                     'desc' => 'укажите код URL ролика после \'https://www.youtube.com/watch?v=\'',
                     'validate' => 'url',
                     'id' =>'video-yutube-url'
@@ -98,7 +98,7 @@ if ( !function_exists( "redux_add_metaboxes" ) ):
 
 	    $metaboxes[] = array(
 		'id'            => 'page-options',
-		'title'         => __( 'Page options', THEME_OPT ),
+		'title'         => __( 'Опции страницы', THEME_OPT ),
 		'post_types'    => array( 'page' ),
 		'page_template' => array('front-page.php'),
 		'position'      => 'normal', // normal, advanced, side
@@ -108,7 +108,7 @@ if ( !function_exists( "redux_add_metaboxes" ) ):
 	    );
 	    $metaboxes[] = array(
 		'id'            => 'services-page-options',
-		'title'         => __( 'Services page options', THEME_OPT ),
+		'title'         => __( 'Опции страницы услуги', THEME_OPT ),
 		'post_types'    => array( 'page' ),
 		'page_template' => array('services-page.php'),
 		'position'      => 'normal', // normal, advanced, side
@@ -119,7 +119,7 @@ if ( !function_exists( "redux_add_metaboxes" ) ):
 
         $metaboxes[] = array(
             'id'            => 'photo-gallery-options',
-            'title'         => __( 'Page options', THEME_OPT ),
+            'title'         => __( 'Опции страницы', THEME_OPT ),
             'post_types'    => array( 'page' ),
             'page_template' => array('photo-gallery-page.php'),
             'position'      => 'normal', // normal, advanced, side
@@ -129,7 +129,7 @@ if ( !function_exists( "redux_add_metaboxes" ) ):
         );
         $metaboxes[] = array(
             'id'            => 'video-gallery-options',
-            'title'         => __( 'Page options', THEME_OPT ),
+            'title'         => __( 'Опции страницы', THEME_OPT ),
             'post_types'    => array( 'page' ),
             'page_template' => array('videos-page.php'),
             'position'      => 'normal', // normal, advanced, side
@@ -139,7 +139,7 @@ if ( !function_exists( "redux_add_metaboxes" ) ):
         );
         $metaboxes[] = array(
             'id'            => 'contact-options',
-            'title'         => __( 'Page options', THEME_OPT ),
+            'title'         => __( 'Опции страницы', THEME_OPT ),
             'post_types'    => array( 'page' ),
             'page_template' => array('contact.php'),
             'position'      => 'normal', // normal, advanced, side
