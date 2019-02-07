@@ -32,7 +32,7 @@ global $mytheme;
             <?php endif;?>
 
             <div class="slider-section">
-            	<?php  echo do_shortcode('[slick-slider category="3" design="design-1" arrows=»true» show_content=»true»]');?>
+            	<?php  echo do_shortcode('[slick-slider category="3" design="design-2" arrows="true" show_content="true"]');?>
         	</div>
 
             <div class="news section">

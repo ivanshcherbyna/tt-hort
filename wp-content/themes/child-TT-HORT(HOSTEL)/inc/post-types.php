@@ -37,7 +37,7 @@ function services_init_post_types()
     register_post_type('services', $args);
 }
 
-add_action('init', 'gallery_init_post_types');
+//add_action('init', 'gallery_init_post_types');
 
 function gallery_init_post_types()
 {

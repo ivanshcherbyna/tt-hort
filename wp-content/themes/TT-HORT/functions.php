@@ -338,4 +338,14 @@ function add_fancybox(){
     wp_enqueue_script('fancy_wrap_script',get_template_directory_uri() . '/inc/js/fancy_wrap_script.js',array('jquery'), '1.0.0', true); //scripts to footer
 
 }
+add_filter( 'wp_nav_menu_items', 'change_nav_menu_items', 10, 2 );
+
+function change_nav_menu_items( $items, $args ) {
+    $site_url_directory = get_stylesheet_directory_uri();
+    if ($site_url_directory == 'http://tt-hort.com/wp-content/themes/TT-HORT' && 'header-menu' == $args->theme_location ) {
+        $items .= '<li class="menu-item menu-item-object-page"><a class="hostel-link" href="http://tt-hort.com/hostel">'. qtranxf_esc_html("[:en]Hostel[:ru]Хостел[:ua]Хостел[:]").'</a></li>';
+    }
+
+    return $items;
+}
 ?>

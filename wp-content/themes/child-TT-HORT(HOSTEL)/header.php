@@ -21,8 +21,8 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-9 text-left contacts">
-<!--                <div class="phone"><i class="fa fa-phone"></i><a href="tel:--><?php //echo $mytheme['telephone-text'];?><!--">--><?php //echo $mytheme['telephone-text'];?><!--</a> </div>-->
-<!--                <div class="address"><i class="fa fa-map-marker"></i>--><?php //echo $mytheme['adress-city-text'].$mytheme['adress-street-text'];?><!--</div>-->
+                <!--                <div class="phone"><i class="fa fa-phone"></i><a href="tel:--><?php //echo $mytheme['telephone-text'];?><!--">--><?php //echo $mytheme['telephone-text'];?><!--</a> </div>-->
+                <!--                <div class="address"><i class="fa fa-map-marker"></i>--><?php //echo $mytheme['adress-city-text'].$mytheme['adress-street-text'];?><!--</div>-->
             </div>
             <div class="col-sm-3 text-right language-labels">
                 <?php qtranxf_generateLanguageSelectCode('image'); ?>
@@ -56,10 +56,9 @@
                             </button>
                             <?php my_nav(); ?>
                         </div>
-                        <div class="mobile"><?php my_nav(); ?>
-                        </div>
-                            <?php qtranxf_generateLanguageSelectCode('image'); ?>
-                        
+                        <div class="mobile"><?php my_nav(); ?></div>
+                        <?php qtranxf_generateLanguageSelectCode('image'); ?>
+
 
                     </div>
                 </nav>
