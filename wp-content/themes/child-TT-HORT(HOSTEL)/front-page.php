@@ -30,7 +30,7 @@ global $mytheme;
 
             <?php endwhile;?>
             <?php endif;?>
-            <div class="slider-section ">
+            <div class="container hostel-slider">
                 <?php echo do_shortcode('[slick-slider category="5" design="design-1" arrows="true" show_content="true"]');?>
             </div>
 

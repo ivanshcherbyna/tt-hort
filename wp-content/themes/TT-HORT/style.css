@@ -389,7 +389,7 @@ header{
 }
 body{
 
-	background: url('./img/background.png') repeat;
+	background: url('./img/background-min_cr.png') repeat;
 
 }
 main{
@@ -897,6 +897,7 @@ main> section{
 	-webkit-box-shadow: inset 1px -36px 90px 0px rgba(65,80,97,0.53);
 	-moz-box-shadow: inset 1px -36px 90px 0px rgba(65,80,97,0.53);
 	box-shadow: inset 1px -36px 90px 0px rgba(65,80,97,0.53);
+	padding-bottom: 20px;
 }
 main.main{
 	-webkit-box-shadow: inset 1px -36px 90px 0px rgba(65,80,97,0.53);

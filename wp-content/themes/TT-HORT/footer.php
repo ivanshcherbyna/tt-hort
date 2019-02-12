@@ -14,10 +14,10 @@
                     <li><?php echo $mytheme['adress-street-text']; ?></li>
                     <li><?php echo $mytheme['adress-city-text']; ?></li>
                     <li>
-                        <a href="tel:<?php echo $mytheme['telephone-text'];?>">tel: <?php echo $mytheme['telephone-text'];?></a>
+                        <a href="tel:<?php echo $mytheme['telephone-text'];?>"><i class="fa fa-phone"></i> <?php echo $mytheme['telephone-text'];?></a>
                     </li>
                     <li>
-                        <a href="<?php echo $mytheme['footer-url-find-us']; ?>"><?php _e('[:en]Find Us[:ru]Мы на карте[:ua]Знайти нас[:]',THEME_OPT) ?></a>
+                        <a href="<?php echo $mytheme['footer-url-find-us']; ?>"><i class="fa fa-map-marker"></i><?php _e('[:en]Find Us[:ru]Мы на карте[:ua]Знайти нас[:]',THEME_OPT) ?></a>
                     </li>
                 </ul>
             </div>
@@ -46,7 +46,7 @@
                     <li>
                         <div class="">
                             <div class="develop">
-                                Develop by <a href="mailto:shcherbyna.ivan@gmail.com" title="Send mail">Shcherbyna Ivan©</a>
+                               <i class="fa fa-chevron-right"></i> Develop by <a href="mailto:shcherbyna.ivan@gmail.com" title="Send mail">Shcherbyna Ivan©</a>
                             </div>
                     </li>
                 </ul>

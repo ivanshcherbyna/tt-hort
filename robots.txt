@@ -1,0 +1,5 @@
+User-agent: *
+
+Disallow:
+
+Sitemap: http://tt-hort.com/sitemap.xml
